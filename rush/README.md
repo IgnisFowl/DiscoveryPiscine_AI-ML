@@ -1,3 +1,9 @@
+<h1 align="center">So long, and thanks for all the fish!</h1>
+
+<div align="center">
+    <img src="example.gif">
+</div>
+
 # dog-cat-full-dataset
 This repository contains 100 images of dogs and cats for training and 25 images of same for testing
 
@@ -11,4 +17,4 @@ python3 -m venv venv
 
 source venv/bin/activate
 
-% streamlit run rush.py 
+streamlit run rush.py 
