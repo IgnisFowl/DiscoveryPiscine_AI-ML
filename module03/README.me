@@ -1,0 +1,30 @@
+1. The Goal of the Program:
+    The goal is to optimize the frequency settings for antennas placed around Forty2 (the fort), 
+so that the 4G/5G signal quality at key locations (dorms, kitchen, showers, cluster, and entrance)
+is as strong as possible.
+    The program uses Genetic Algorithms (GA), which are inspired by natural selection, to iteratively 
+improve a population of frequency settings to reach the optimal antenna configuration.
+2. Overall Flow of the Genetic Algorithm:
+P   opulation Initialization: We start with a population of random individuals, each representing a 
+set of 4 antenna frequencies. These frequencies are between 45.0 MHz and 50.0 MHz.
+    Evaluation: The fitness of each individual (i.e., a set of frequencies) is evaluated based on how 
+well it performs in terms of signal reliability at the 5 key locations. The ./cellular program is 
+used to evaluate the performance, and it returns reliability scores for each location.
+    Selection: The individuals with the highest fitness scores (best antenna frequency configurations)
+are selected to form the next generation.
+    Crossover: Pairs of individuals (parents) are combined to produce offspring by crossing over 
+portions of their frequency settings.
+    Mutation: Some offspring undergo mutation, where one of their frequency settings is randomly 
+altered.
+    Iteration: This process is repeated for multiple generations, each time improving the population 
+towards the optimal frequency configuration.
+
+Why the Code Works:
+    Genetic Algorithm Principles: The code implements the core concepts of a genetic algorithm: 
+population initialization, fitness evaluation, selection, crossover, and mutation.
+    Real-World Connection: The integration with the ./cellular program allows the algorithm to 
+assess antenna frequency performance in real-world conditions, making the optimization process 
+grounded in actual data.
+    Iterative Improvement: Through multiple generations, the algorithm evolves better solutions, 
+moving closer to the optimal antenna configuration that maximizes signal quality at the five 
+locations.
